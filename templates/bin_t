@@ -1,0 +1,30 @@
+{% extends 'base/layout.html' %}
+<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+{% load static %}
+{{msg}}
+
+{% block content %}
+<!--<body background="{% static 'img/2.jpg' %}">-->
+<!--<img src="{% static 'img/1.jpg' %}" alt="" height="42" width="42">
+
+<div align="center"><h1><font color="blue">this is home page</font></h1></div>
+
+<ul>
+        {% for i in 'suchetha' %}
+        <font color="white"><li>{{ i }}</li></font>
+        {% endfor %}
+</ul>-->
+
+<form action="" method="POST">
+        {% csrf_token %}{{form.as_p}}
+        {{msg}}
+        <input type="text" name="" id="" class="form-control" maxlength="10"
+        minlength="2" placeholder="Some text" required="true" autofocus="true">
+        <input type="email" name="" id="" class="form-control" maxlength="10"
+        placeholder="email" required="true">
+        <input type="number" name="" id="" class="form-control" maxlength="10"
+        minlength="2" placeholder="number" required="true">
+        <input type="submit" value="submit">
+</form>
+
+{% endblock %}
